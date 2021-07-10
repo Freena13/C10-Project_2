@@ -14,7 +14,7 @@ function setup()
   sea = createSprite(200,200,50,50);
   sea.addImage(sea_2);
   sea.scale = 0.3;
-  sea.velocityX = -2;
+  
   ship = createSprite(130,230,40,10);
   ship.addAnimation("ship",ship_2);
   ship.scale = 0.3
@@ -24,7 +24,8 @@ function draw() {
   background("blue");
   if(sea.x<0)
   {
-    sea.x = sea.width/2;
+    sea.x = sea.width/8;
   }
+  sea.velocityX = -2;
   drawSprites()
 }
